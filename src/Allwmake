@@ -1,0 +1,21 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+targetType=libso
+. $WM_PROJECT_DIR/wmake/scripts/AllwmakeParseArguments
+
+set -x
+#wmake $makeType ./flameletTable
+
+# wmake $makeType ./thermophysicalModels/specie
+wmake $targetType thermophysicalModels/basic
+wmake $targetType thermophysicalModels/reactionThermo
+# wmake $targetType thermophysicalModels/chemistryModel
+
+wmake $targetType TurbulenceModels/turbulenceModels
+wmake $targetType TurbulenceModels/compressible
+
+# wmake $targetType fvOptions
+
+wmake $targetType combustionModels
+
+# ----------------------------------------------------------------- end-of-file

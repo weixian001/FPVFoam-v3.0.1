@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd ${0%/*} || exit 1    # run from this directory
+targetType=libso
+. $WM_PROJECT_DIR/wmake/scripts/AllwmakeParseArguments
+set -x
+
+src/Allwmake
+
+wmake  applications/utilities/preProcessing/canteraToFPVFoamV30
+wmake  applications/utilities/postProcessing/FPVFoamV30Post
+wmake  applications/solver/FPVFoamV30
+
+# ----------------------------------------------------------------- end-of-file

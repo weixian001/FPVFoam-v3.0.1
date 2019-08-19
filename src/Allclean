@@ -1,0 +1,18 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+targetType=libso
+. $WM_PROJECT_DIR/wmake/scripts/AllwmakeParseArguments
+set -x
+#wclean ./flameletTable
+
+wclean $targetType thermophysicalModels/basic
+wclean $targetType thermophysicalModels/reactionThermo
+
+wclean $targetType TurbulenceModels/turbulenceModels
+wclean $targetType TurbulenceModels/compressible
+
+wclean $targetType fvOptions
+
+wclean $targetType combustionModels
+
+# ----------------------------------------------------------------- end-of-file

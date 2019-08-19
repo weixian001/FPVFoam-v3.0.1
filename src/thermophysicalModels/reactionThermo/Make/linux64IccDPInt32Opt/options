@@ -1,0 +1,17 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "Make/options"
+EXE_INC = -I$(LIB_SRC)/finiteVolume/lnInclude -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/basic/lnInclude -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude -I$(LIB_SRC)/transportModels/compressible/lnInclude
+
+
+
+
+
+LIB_LIBS = -L$(FOAM_USER_LIBBIN) -lcompressibleTransportModels -lfiniteVolume -lFPVFoamV30fluidThermophysicalModels -lspecie
+
+
+
+
+
+

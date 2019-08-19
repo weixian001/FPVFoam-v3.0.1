@@ -1,0 +1,11 @@
+chemistryReaders/chemkinReader/chemkinReader.C
+chemistryReaders/chemkinReader/chemkinLexer.L
+chemistryReaders/chemistryReader/makeChemistryReaders.C
+
+mixtures/basicMultiComponentMixture/basicMultiComponentMixture.C
+mixtures/basicSpecieMixture/basicSpecieMixture.C
+
+rhoReactionThermo/rhoReactionThermo.C
+rhoReactionThermo/rhoReactionThermos.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30reactionThermophysicalModels
