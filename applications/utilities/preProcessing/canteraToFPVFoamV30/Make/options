@@ -6,10 +6,10 @@ EXE_INC = \
     -I$(LIB_FPVFoamV30_SRC)/TurbulenceModels/turbulenceModels/lnInclude \
     -I$(LIB_FPVFoamV30_SRC)/TurbulenceModels/compressible/lnInclude\
     -I$(LIB_SRC)/transportModels/compressible/lnInclude \
-    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/specie/lnInclude \
     -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/reactionThermo/lnInclude \
     -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/basic/lnInclude \
-    -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude \
+    -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/chemistryModel/lnInclude \
     -I$(LIB_FPVFoamV30_SRC)/combustionModels/lnInclude
     
 EXE_LIBS = \
@@ -17,8 +17,8 @@ EXE_LIBS = \
     -lODE \
     -lcompressibleTransportModels \
     -lFPVFoamV30fluidThermophysicalModels \
-    -lspecie \
-    -lchemistryModel \
+    -lFPVFoamV30specie \
+    -lFPVFoamV30chemistryModel \
     -lFPVFoamV30CombustionModels \
     -lFPVFoamV30reactionThermophysicalModels \
     -lFPVFoamV30turbulenceModels \

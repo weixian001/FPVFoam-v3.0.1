@@ -1,8 +1,8 @@
 $(OBJECTS_DIR)/psiThermo/psiThermo.C.dep: \
 psiThermo/psiThermo.C \
 psiThermo/psiThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/fluidThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+lnInclude/fluidThermo.H \
+lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H \
@@ -485,7 +485,7 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/transportModels/compressible/lnInclude/compressibleTransportModel.H \
 
 

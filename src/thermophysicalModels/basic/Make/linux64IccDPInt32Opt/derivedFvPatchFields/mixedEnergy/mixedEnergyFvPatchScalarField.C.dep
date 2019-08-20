@@ -486,8 +486,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/sphericalTensorFieldField.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/sphericalTensorFieldField.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tensorFieldField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+lnInclude/basicThermoTemplates.C \
 
 

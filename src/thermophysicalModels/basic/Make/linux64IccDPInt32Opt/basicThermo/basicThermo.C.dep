@@ -487,15 +487,15 @@ basicThermo/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/zeroGradientFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/zeroGradientFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/zeroGradientFvPatchField.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/fixedEnergyFvPatchScalarField.H \
+lnInclude/fixedEnergyFvPatchScalarField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedValueFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedValueFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedValueFvPatchField.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/gradientEnergyFvPatchScalarField.H \
+lnInclude/gradientEnergyFvPatchScalarField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedGradientFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedGradientFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedGradientFvPatchField.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/mixedEnergyFvPatchScalarField.H \
+lnInclude/mixedEnergyFvPatchScalarField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/mixedFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/mixedFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/mixedFvPatchField.C \
@@ -579,11 +579,11 @@ $(WM_PROJECT_DIR)/src/meshTools/lnInclude/cyclicAMIPolyPatchTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/cyclicAMIFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/jumpCyclicAMIFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedJumpAMIFvPatchField.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/energyJumpFvPatchScalarField.H \
+lnInclude/energyJumpFvPatchScalarField.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DataEntry.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DataEntry.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DataEntryIO.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DataEntryNew.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/energyJumpAMIFvPatchScalarField.H \
+lnInclude/energyJumpAMIFvPatchScalarField.H \
 
 

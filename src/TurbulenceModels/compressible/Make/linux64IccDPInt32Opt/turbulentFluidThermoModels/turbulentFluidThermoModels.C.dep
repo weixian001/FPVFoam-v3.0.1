@@ -508,10 +508,10 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvsPatchFields.H \
 lnInclude/compressibleTurbulenceModel.H \
 lnInclude/CompressibleTurbulenceModel.C \
 $(WM_PROJECT_DIR)/src/transportModels/compressible/lnInclude/compressibleTransportModel.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/fluidThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/fluidThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addToRunTimeSelectionTable.H \
 turbulentFluidThermoModels/makeTurbulenceModel.H \
 lnInclude/EddyDiffusivity.H \

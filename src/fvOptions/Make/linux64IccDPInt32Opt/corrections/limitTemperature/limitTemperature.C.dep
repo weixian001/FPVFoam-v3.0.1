@@ -395,7 +395,7 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/slicedSurfaceFieldsFwd.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMeshTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvPatchFvMeshTemplates.C \
 lnInclude/cellSetOptionI.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H \
@@ -491,7 +491,7 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addToRunTimeSelectionTable.H \
 
 

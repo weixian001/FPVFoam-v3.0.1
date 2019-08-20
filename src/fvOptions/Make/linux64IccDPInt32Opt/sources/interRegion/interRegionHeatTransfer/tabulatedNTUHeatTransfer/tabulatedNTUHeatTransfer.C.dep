@@ -584,9 +584,9 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tableReader.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/interpolation2DTable.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/openFoamTableReader.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/openFoamTableReader.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addToRunTimeSelectionTable.H \
 
 

@@ -116,6 +116,7 @@ int main(int argc, char *argv[])
     //scalar CLimiter = max(C_Param);
 
     scalarList x(3);
+    scalarList y(3);
     List<List<int> > ubIF(mesh.cells().size());
     List<scalarList> posIF(mesh.cells().size());
     List<List<int> > ubP(mesh.faces().size());
@@ -124,7 +125,8 @@ int main(int argc, char *argv[])
     wordList tableNames(thermo.composition().species());
     tableNames.append("he");
     tableNames.append("Srr");
-    Foam::combustionModels::tableSolver solver(Foam::combustionModels::tableSolver(mesh, tableNames));
+    word LambdaNames = "chi_lambda_table";
+    Foam::combustionModels::tableSolver solver(Foam::combustionModels::tableSolver(mesh, tableNames, LambdaNames));
 
     PtrList<volScalarField>& Y(thermo.composition().Y());
     volScalarField& he(thermo.he());
@@ -200,7 +202,11 @@ int main(int argc, char *argv[])
         );
 
         // Interpolate for internal Field
-        scalar chiMax = solver.maxChi();
+        //scalar chiMax = solver.maxChi();
+        //scalar chiMin = solver.minChi();
+        scalar LambdaMax = solver.maxChi();
+        double Lambda;
+
         forAll(Y, i)
         {
      	  scalarField& YCells = Y[i].internalField();
@@ -209,8 +215,18 @@ int main(int argc, char *argv[])
            {
          	 if (i == 0)
          	 {
-                  //if (useScalarDissipation_)   x[0] = min(chi[cellI], chiLimiter);
-                  if (useProgressVariable_)   x[0] = min(chiMax, max(0,chi[cellI]));      //amended
+                 y[0] = min(Zeta[cellI], 0.99);
+                 y[1] = Z[cellI];
+                 y[2] = max(0.0, chi[cellI]);
+
+                 List<int> ubCL_ = solver.upperBounds_Lambda(y);
+                 scalarList posCL_ = solver.position_Lambda(ubCL_, y);
+
+                 scalarList Lambda_ = solver.interpolateS(ubCL_, posCL_);
+                 Lambda = solver.upperBoundsLambda_(y[2],Lambda_);
+
+                  //if (useProgressVariable_)   x[0] = min(chiMax, max(0,chi[cellI]));      //amended
+                  if (useProgressVariable_)   x[0] = min(Lambda, LambdaMax);   
                   if (useMixtureFractionVariance_) x[1] = min(Zeta[cellI], 0.99);
                   x[2] = Z[cellI];
 
@@ -244,8 +260,18 @@ int main(int argc, char *argv[])
                {
               	 if (i == 0)
               	 {
-                      //if (useScalarDissipation_) x[0] = min(pChi[facei], chiLimiter);
-                      if (useProgressVariable_) x[0] = min(chiMax, max(0, pChi[facei]));		//added
+                     y[0] = min(Zeta[facei], 0.99);
+                     y[1] = pZ[facei];
+                     y[2] = max(0.0, pChi[facei]);
+
+                     List<int> ubCL_ = solver.upperBounds_Lambda(y);
+                     scalarList posCL_ = solver.position_Lambda(ubCL_, y);
+
+                     scalarList Lambda_ = solver.interpolateS(ubCL_, posCL_);
+                     Lambda = solver.upperBoundsLambda_(y[2],Lambda_);
+
+                      //if (useProgressVariable_) x[0] = min(chiMax, max(0, pChi[facei]));		//added
+                      if (useProgressVariable_) x[0] = min(Lambda, LambdaMax);          //added
                       if (useMixtureFractionVariance_) x[1] = min(pZeta[facei], 0.99);
                       x[2] = pZ[facei];
 

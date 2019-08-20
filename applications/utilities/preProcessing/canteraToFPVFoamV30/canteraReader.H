@@ -142,6 +142,7 @@ private:
         scalar size_;
 
         List<List<List<List<scalar> > > > sampledData_;
+        List<List<List<List<scalar> > > > newData_;
 
         List<scalar> enthalpyCantera_;
         int enthalpy_col;
@@ -169,6 +170,8 @@ public:
         hashedWordList getNames();
 
         void write(const int& i,IOdictionary& dictionary,OFstream& output);
+
+        void writechi(IOdictionary& dictionary,OFstream& output);
 };
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

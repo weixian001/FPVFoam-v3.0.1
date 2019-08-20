@@ -33,7 +33,7 @@ Contributors/Copyright
     2019 Lim Wei XIan <weixian001@e.ntu.edu.sg> NTUsg
 
 \*---------------------------------------------------------------------------*/
-
+#include "bound.H"
 #include "fvCFD.H"
 #include "rhoCombustionModel.H"
 #include "turbulentFluidThermoModel.H"  // added for v3.0
@@ -97,7 +97,8 @@ int main(int argc, char *argv[])
             #include "UEqn.H"
             #include "PvEqn.H"   //added
             #include "ZEqn.H"
- 
+	    #include "varZEqn.H"	
+	
 	// --- Pressure corrector loop
             while (pimple.correct())
     	    {

@@ -1,9 +1,8 @@
 /*---------------------------------------------------------------------------*\
   =========                 |
-
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     |
-    \\  /    A nd           | Copyright (C) 2012-2013 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2012-2015 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -32,17 +31,14 @@ SourceFiles
     fluidThermo.C
 
 Contributors/Copyright
-    2014 Hagen Müller <hagen.mueller@unibw.de> Universität der Bundeswehr München
-    2014 Likun Ma <L.Ma@tudelft.nl> TU Delft
     2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
- 
 \*---------------------------------------------------------------------------*/
 
 #ifndef fluidThermo_H
 #define fluidThermo_H
 
 #include "basicThermo.H"
-#include "compressibleTransportModel.H"		// added for v3.0
+#include "compressibleTransportModel.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -56,29 +52,19 @@ namespace Foam
 class fluidThermo
 :
     public basicThermo,
-    public compressibleTransportModel	//added for v3.0
+    public compressibleTransportModel
 {
 
-protected :
+protected:		//added this section
 
-    //- Mixture Fraction []
     volScalarField Z_;
 
-    //- Mixture Fraction variance []
     volScalarField varZ_;
 
-    //- Scalar dissipation rate [1/s]
     volScalarField Chi_;
-    
-    //- Progress Variable []
-    //volScalarField Pv_;			//added
 
-    //- Progress Variable variance []
-    //volScalarField varPv_;		//added
-    
-    //- Source by Species Reaction Rate [1/s]
     volScalarField Srr_;
-  
+
 public:
 
     //- Runtime type information
@@ -136,57 +122,33 @@ public:
         // Access to transport state variables
 
             //- Dynamic viscosity of mixture [kg/m/s]
-            //virtual const volScalarField& mu() const = 0;
-            virtual tmp<volScalarField> mu() const = 0;		//modified as per v3.0
+            virtual tmp<volScalarField> mu() const = 0;
 
             //- Dynamic viscosity of mixture for patch [kg/m/s]
-            //virtual const scalarField& mu(const label patchi) const = 0;
-            virtual tmp<scalarField> mu(const label patchi) const = 0;	//modified as per v3.0
+            virtual tmp<scalarField> mu(const label patchi) const = 0;
 
             //- Kinematic viscosity of mixture [m^2/s]
             virtual tmp<volScalarField> nu() const;
 
             //- Kinematic viscosity of mixture for patch [m^2/s]
             virtual tmp<scalarField> nu(const label patchi) const;
-	    	    
-             //- Mixture Fraction []
-	        //  Non-const access allowed for transport equations
-	        virtual volScalarField& Z();
-	    
-	        //- Mixture Fraction []
-	        virtual const volScalarField& Z() const;
 
-	        //  Non-const access allowed for transport equations
-	        virtual volScalarField& varZ();
+		// Added this section						//added 
+                virtual volScalarField& Z();
 
-	        //- Mixture Fraction []
-	        virtual const volScalarField& varZ() const;
+                virtual const volScalarField& Z() const;
 
-	        //  Non-const access allowed for transport equations
-	        virtual volScalarField& Chi();
+                virtual volScalarField& varZ();
 
-	        //- Scalar dissipation rate [1/s]
-	        virtual const volScalarField& Chi() const;
-	        
-	        //  Non-const access allowed for transport equations
-	        //virtual volScalarField& Pv();				//added
-	    
-	        //- Progress Variable []
-	        //virtual const volScalarField& Pv() const;		//added
-	        
-	        //  Non-const access allowed for transport equations
-	        //virtual volScalarField& varPv();			//added
+                virtual const volScalarField& varZ() const;
 
-	        //- Mixture Fraction []
-	        //virtual const volScalarField& varPv() const;		//added
-	        
-	        //  Non-const access allowed for transport equations
-	        virtual volScalarField& Srr();				//added
-	    
-	        //- Reaction rate Source [1/time]
-	        virtual const volScalarField& Srr() const;		//added
+                virtual volScalarField& Chi();
 
- 
+                virtual const volScalarField& Chi() const;
+
+                virtual volScalarField& Srr();
+
+                virtual const volScalarField& Srr() const;
 };
 
 

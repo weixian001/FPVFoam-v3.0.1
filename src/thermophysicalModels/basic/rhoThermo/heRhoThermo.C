@@ -21,6 +21,9 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
+Contributors/Copyright
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
+
 \*---------------------------------------------------------------------------*/
 
 #include "heRhoThermo.H"
@@ -70,7 +73,7 @@ void Foam::heRhoThermo<BasicPsiThermo, MixtureType>::calculate()
         fvPatchScalarField& pmu = this->mu_.boundaryField()[patchi];
         fvPatchScalarField& palpha = this->alpha_.boundaryField()[patchi];
 
-        if (pT.fixesValue())
+/*        if (pT.fixesValue())
         {
             forAll(pT, facei)
             {
@@ -87,6 +90,7 @@ void Foam::heRhoThermo<BasicPsiThermo, MixtureType>::calculate()
         }
         else
         {
+*/
             forAll(pT, facei)
             {
                 const typename MixtureType::thermoType& mixture_ =
@@ -99,8 +103,17 @@ void Foam::heRhoThermo<BasicPsiThermo, MixtureType>::calculate()
                 pmu[facei] = mixture_.mu(pp[facei], pT[facei]);
                 palpha[facei] = mixture_.alphah(pp[facei], pT[facei]);
             }
-        }
+//        }
     }
+
+    Info << "----------> T min/max =" << min(this->T_).value() << ", "
+        << max(this->T_).value() << endl;
+    Info << "----------> psi min/max =" << min(this->psi_).value() << ", "
+        << max(this->psi_).value() << endl;
+    Info << "----------> rho min/max =" << min(this->rho_).value() << ", "
+        << max(this->rho_).value() << endl;
+    Info << "----------> mu min/max =" << min(this->mu_).value() << ", "
+        << max(this->mu_).value() << endl;
 }
 
 
@@ -115,7 +128,7 @@ Foam::heRhoThermo<BasicPsiThermo, MixtureType>::heRhoThermo
 :
     heThermo<BasicPsiThermo, MixtureType>(mesh, phaseName)
 {
-   // calculate();
+ //   calculate();		//removed
 }
 
 

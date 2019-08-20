@@ -205,8 +205,11 @@ public:
         //- Return the Reynolds stress tensor
         virtual tmp<volSymmTensorField> R() const = 0;
 
-        //- Return the turbulence mixture fraction diffusivity
-        virtual tmp<volScalarField> DZt() const = 0;					//added
+        //- Return the Coeff of productive term of varZ
+        virtual tmp<volScalarField> Production() const = 0;					//added
+
+        //- Return the Coeff of destructive term of varZ
+        virtual tmp<volScalarField> Destruction() const = 0;
 
         //- Return the effective turbulence mixture fraction diffusivity
         virtual tmp<volScalarField> DZEff() const = 0;					//added
@@ -219,7 +222,7 @@ public:
         virtual void correct() = 0;
 
         //- Calculate mixture fraction variance
-        virtual tmp<volScalarField> correctVarZ(volScalarField& varZ) const = 0;		//added
+        //virtual tmp<volScalarField> correctVarZ(volScalarField& varZ) const = 0;		//added
 };
 
 

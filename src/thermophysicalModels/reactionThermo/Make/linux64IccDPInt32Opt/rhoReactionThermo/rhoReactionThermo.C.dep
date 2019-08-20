@@ -1,9 +1,9 @@
 $(OBJECTS_DIR)/rhoReactionThermo/rhoReactionThermo.C.dep: \
 rhoReactionThermo/rhoReactionThermo.C \
 rhoReactionThermo/rhoReactionThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/rhoThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/fluidThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/rhoThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/fluidThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H \
@@ -486,11 +486,11 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/transportModels/compressible/lnInclude/compressibleTransportModel.H \
 lnInclude/basicSpecieMixture.H \
 lnInclude/basicMultiComponentMixture.H \
-$(WM_PROJECT_DIR)/src/thermophysicalModels/specie/lnInclude/speciesTable.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/specie/lnInclude/speciesTable.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordList.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordListI.H \
 lnInclude/basicMultiComponentMixtureI.H \

@@ -21,6 +21,8 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
+Contributors/Copyright
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
 \*---------------------------------------------------------------------------*/
 
 #include "rhoThermo.H"
@@ -47,7 +49,7 @@ Foam::rhoThermo::rhoThermo(const fvMesh& mesh, const word& phaseName)
             mesh.time().timeName(),
             mesh,
             IOobject::NO_READ,
-            IOobject::AUTO_WRITE
+            IOobject::NO_WRITE
         ),
         mesh,
         dimDensity
@@ -99,7 +101,7 @@ Foam::rhoThermo::rhoThermo
             mesh.time().timeName(),
             mesh,
             IOobject::NO_READ,
-            IOobject::AUTO_WRITE
+            IOobject::NO_WRITE
         ),
         mesh,
         dimDensity
@@ -190,5 +192,15 @@ Foam::tmp<Foam::scalarField> Foam::rhoThermo::mu(const label patchi) const
     return mu_.boundaryField()[patchi];
 }
 
+/*
+Foam::volScalarField& Foam::rhoThermo::psi()			//optional added
+{
+    return psi_;
+}
 
+Foam::volScalarField& Foam::rhoThermo::mu()
+{
+        return mu_;
+}
+*/
 // ************************************************************************* //

@@ -603,9 +603,9 @@ $(WM_PROJECT_DIR)/src/meshTools/lnInclude/AABBTree.C \
 $(WM_PROJECT_DIR)/src/meshTools/lnInclude/cyclicAMIPolyPatch.H \
 $(WM_PROJECT_DIR)/src/meshTools/lnInclude/cyclicAMIPolyPatchI.H \
 $(WM_PROJECT_DIR)/src/meshTools/lnInclude/cyclicAMIPolyPatchTemplates.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/uniformDimensionedFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UniformDimensionedField.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UniformDimensionedField.C \

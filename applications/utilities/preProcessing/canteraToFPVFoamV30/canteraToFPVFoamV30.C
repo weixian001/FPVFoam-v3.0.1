@@ -144,6 +144,21 @@ int main(int argc, char *argv[])
       canteraRead.write(i, dictionary, output);
    }
 
+      IOdictionary dictionaryChi
+      (
+         IOobject
+         (
+            "chi_lambda",
+            runTime.constant(),
+            runTime,
+            IOobject::NO_READ,
+            IOobject::NO_WRITE,
+            false
+         )
+      );
+   OFstream output("constant/chi_lambda_table");
+   canteraRead.writechi(dictionaryChi, output);
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 Info<< "End\n" << endl;
 

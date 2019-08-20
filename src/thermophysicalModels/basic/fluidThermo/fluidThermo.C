@@ -22,8 +22,6 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Contributors/Copyright
-    2014 Hagen Müller <hagen.mueller@unibw.de> Universität der Bundeswehr München
-    2014 Likun Ma <L.Ma@tudelft.nl> TU Delft
     2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
 
 \*---------------------------------------------------------------------------*/
@@ -44,8 +42,7 @@ namespace Foam
 Foam::fluidThermo::fluidThermo(const fvMesh& mesh, const word& phaseName)
 :
     basicThermo(mesh, phaseName),
-    
-    Z_
+    Z_						//added this section
     (
         IOobject
         (
@@ -57,7 +54,7 @@ Foam::fluidThermo::fluidThermo(const fvMesh& mesh, const word& phaseName)
         ),
         mesh
     ),
-    
+
     varZ_
     (
         IOobject
@@ -83,34 +80,7 @@ Foam::fluidThermo::fluidThermo(const fvMesh& mesh, const word& phaseName)
         ),
         mesh
     ),
-    
-    /*Pv_						//added
-    (
-        IOobject
-        (
-            "Pv",
-            mesh.time().timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    ),*/
-    
-    /*varPv_					//added
-    (
-        IOobject
-        (
-            "varPv",
-            mesh.time().timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    ),*/
-    
-    Srr_					//added
+    Srr_                                        
     (
         IOobject
         (
@@ -119,12 +89,11 @@ Foam::fluidThermo::fluidThermo(const fvMesh& mesh, const word& phaseName)
             mesh,
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
-            //IOobject::MUST_READ,
-            //IOobject::AUTO_WRITE
         ),
         mesh,
-        dimensionSet(0, 0, -1, 0, 0)
+        dimensionSet(1, -3, -1, 0, 0)
     )
+
 {}
 
 
@@ -137,13 +106,11 @@ Foam::fluidThermo::fluidThermo
 )
 :
     basicThermo(mesh, dict, phaseName),
-
-    
-    Z_
+    Z_						//added this section
     (
         IOobject
         (
-            phasePropertyName("Zmix"),
+            "Zmix",
             mesh.time().timeName(),
             mesh,
             IOobject::MUST_READ,
@@ -151,12 +118,12 @@ Foam::fluidThermo::fluidThermo
         ),
         mesh
     ),
-    
+
     varZ_
     (
         IOobject
         (
-            phasePropertyName("varZ"),
+            "varZ",
             mesh.time().timeName(),
             mesh,
             IOobject::MUST_READ,
@@ -164,12 +131,11 @@ Foam::fluidThermo::fluidThermo
         ),
         mesh
     ),
-
     Chi_
     (
         IOobject
         (
-            phasePropertyName("chi"),
+            "chi",
             mesh.time().timeName(),
             mesh,
             IOobject::MUST_READ,
@@ -177,49 +143,19 @@ Foam::fluidThermo::fluidThermo
         ),
         mesh
     ),
-        
-    /*Pv_						//added
+    Srr_                                       
     (
         IOobject
         (
-            phasePropertyName("Pv"),
-            mesh.time().timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    ),*/
-    
-    /*varPv_						//added
-    (
-        IOobject
-        (
-            phasePropertyName("varPv"),
-            mesh.time().timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    ),*/
-    
-    Srr_						//added
-    (
-        IOobject
-        (
-            phasePropertyName("Srr"),
+            "Srr",
             mesh.time().timeName(),
             mesh,
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
-            //IOobject::MUST_READ,
-            //IOobject::AUTO_WRITE
         ),
         mesh,
-        dimensionSet(0, 0, -1, 0, 0)
+        dimensionSet(1, -3, -1, 0, 0)
     )
-
 {}
 
 
@@ -254,6 +190,7 @@ Foam::tmp<Foam::scalarField> Foam::fluidThermo::nu(const label patchi) const
     return mu(patchi)/rho(patchi);
 }
 
+//added this section
 
 Foam::volScalarField& Foam::fluidThermo::Z()
 {
@@ -286,36 +223,14 @@ const Foam::volScalarField& Foam::fluidThermo::Chi() const
     return Chi_;
 }
 
-/*Foam::volScalarField& Foam::fluidThermo::Pv()			//added
-{
-    return Pv_;
-}
-
-const Foam::volScalarField& Foam::fluidThermo::Pv() const	//added
-{
-    return Pv_;
-}*/
-
-/*Foam::volScalarField& Foam::fluidThermo::varPv()		//added
-{
-    return varPv_;
-}
-
-const Foam::volScalarField& Foam::fluidThermo::Pv() const	//added
-{
-    return varPv_;
-}*/
-
-
-Foam::volScalarField& Foam::fluidThermo::Srr()			//added
+Foam::volScalarField& Foam::fluidThermo::Srr()                  
 {
     return Srr_;
 }
 
-const Foam::volScalarField& Foam::fluidThermo::Srr() const	//added
+const Foam::volScalarField& Foam::fluidThermo::Srr() const     
 {
     return Srr_;
 }
-
 
 // ************************************************************************* //

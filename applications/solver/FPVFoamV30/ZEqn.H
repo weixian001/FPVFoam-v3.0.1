@@ -13,9 +13,9 @@
     Info<< "----------> Zmix min/max   = " << min(Zmix).value() << ", "
         << max(Zmix).value() << endl;
 
-        varZ = turbulence->correctVarZ(varZ);	
+        //varZ = turbulence->correctVarZ(varZ);	
 	
 	
 
-    combustion->correct();
+    //combustion->correct();
     

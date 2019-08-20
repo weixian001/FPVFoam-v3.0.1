@@ -21,6 +21,8 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
+Contributors/Copyright
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
 \*---------------------------------------------------------------------------*/
 
 #include "hePsiThermo.H"
@@ -67,7 +69,7 @@ void Foam::hePsiThermo<BasicPsiThermo, MixtureType>::calculate()
         fvPatchScalarField& pmu = this->mu_.boundaryField()[patchi];
         fvPatchScalarField& palpha = this->alpha_.boundaryField()[patchi];
 
-        if (pT.fixesValue())
+/*        if (pT.fixesValue())						//removed
         {
             forAll(pT, facei)
             {
@@ -83,6 +85,7 @@ void Foam::hePsiThermo<BasicPsiThermo, MixtureType>::calculate()
         }
         else
         {
+*/
             forAll(pT, facei)
             {
                 const typename MixtureType::thermoType& mixture_ =
@@ -94,7 +97,7 @@ void Foam::hePsiThermo<BasicPsiThermo, MixtureType>::calculate()
                 pmu[facei] = mixture_.mu(pp[facei], pT[facei]);
                 palpha[facei] = mixture_.alphah(pp[facei], pT[facei]);
             }
-        }
+//        }
     }
 }
 
@@ -110,7 +113,7 @@ Foam::hePsiThermo<BasicPsiThermo, MixtureType>::hePsiThermo
 :
     heThermo<BasicPsiThermo, MixtureType>(mesh, phaseName)
 {
-    calculate();
+ //   calculate();				removed
 
     // Switch on saving old time
     this->psi_.oldTime();

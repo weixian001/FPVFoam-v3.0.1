@@ -21,6 +21,9 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
+Contributors/Copyright
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
+
 \*---------------------------------------------------------------------------*/
 
 #include "rhoThermo.H"
@@ -29,11 +32,11 @@ License
 #include "specie.H"
 #include "perfectGas.H"
 #include "incompressiblePerfectGas.H"
-#include "Boussinesq.H"
+#include "Boussinesq.H"			// new for of3.0
 #include "rhoConst.H"
 #include "perfectFluid.H"
-#include "PengRobinsonGas.H"
-#include "adiabaticPerfectFluid.H"
+//#include "PengRobinsonGas.H"		//removed
+//#include "adiabaticPerfectFluid.H"	//removed
 
 #include "hConstThermo.H"
 #include "janafThermo.H"
@@ -118,7 +121,7 @@ makeThermo
     specie
 );
 
-makeThermo
+/*makeThermo
 (
     rhoThermo,
     heRhoThermo,
@@ -128,7 +131,7 @@ makeThermo
     hConstThermo,
     adiabaticPerfectFluid,
     specie
-);
+);*/
 
 makeThermo
 (
@@ -178,7 +181,7 @@ makeThermo
     specie
 );
 
-makeThermo
+makeThermo			//new for of3.0
 (
     rhoThermo,
     heRhoThermo,
@@ -190,7 +193,7 @@ makeThermo
     specie
 );
 
-makeThermo
+makeThermo			//new for of3.0
 (
     rhoThermo,
     heRhoThermo,
@@ -202,7 +205,7 @@ makeThermo
     specie
 );
 
-makeThermo
+makeThermo			//new for of3.0
 (
     rhoThermo,
     heRhoThermo,
@@ -214,7 +217,7 @@ makeThermo
     specie
 );
 
-makeThermo
+/*makeThermo				//removed
 (
     rhoThermo,
     heRhoThermo,
@@ -248,7 +251,7 @@ makeThermo
     janafThermo,
     PengRobinsonGas,
     specie
-);
+);*/
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -312,7 +315,7 @@ makeThermo
     specie
 );
 
-makeThermo
+/*makeThermo					//removed
 (
     rhoThermo,
     heRhoThermo,
@@ -322,7 +325,7 @@ makeThermo
     hConstThermo,
     adiabaticPerfectFluid,
     specie
-);
+);*/
 
 makeThermo
 (
@@ -384,7 +387,7 @@ makeThermo
     specie
 );
 
-makeThermo
+makeThermo				//new for of3.0
 (
     rhoThermo,
     heRhoThermo,
@@ -396,7 +399,7 @@ makeThermo
     specie
 );
 
-makeThermo
+makeThermo				//new for of3.0
 (
     rhoThermo,
     heRhoThermo,

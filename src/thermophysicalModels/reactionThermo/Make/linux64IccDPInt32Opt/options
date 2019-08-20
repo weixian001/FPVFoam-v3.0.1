@@ -2,16 +2,11 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "Make/options"
-EXE_INC = -I$(LIB_SRC)/finiteVolume/lnInclude -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/basic/lnInclude -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude -I$(LIB_SRC)/transportModels/compressible/lnInclude
-
-
-
-
-
-LIB_LIBS = -L$(FOAM_USER_LIBBIN) -lcompressibleTransportModels -lfiniteVolume -lFPVFoamV30fluidThermophysicalModels -lspecie
+EXE_INC = -I$(LIB_SRC)/transportModels/compressible/lnInclude -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/basic/lnInclude -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/specie/lnInclude -I$(LIB_SRC)/thermophysicalModels/solidSpecie/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude
 
 
 
 
 
 
+LIB_LIBS = -L$(FOAM_USER_LIBBIN) -lcompressibleTransportModels -lFPVFoamV30fluidThermophysicalModels -lFPVFoamV30specie -lsolidSpecie -lfiniteVolume

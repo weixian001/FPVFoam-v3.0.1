@@ -530,9 +530,9 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSmoother.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSolver.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DiagonalSolver.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DiagonalSolver.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addToRunTimeSelectionTable.H \
 
 

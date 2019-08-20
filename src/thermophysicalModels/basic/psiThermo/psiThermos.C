@@ -28,7 +28,7 @@ License
 
 #include "specie.H"
 #include "perfectGas.H"
-#include "PengRobinsonGas.H"
+//#include "PengRobinsonGas.H"			//removed
 #include "hConstThermo.H"
 #include "eConstThermo.H"
 #include "janafThermo.H"
@@ -88,7 +88,7 @@ makeThermo
     specie
 );
 
-makeThermo
+/*makeThermo				//removed
 (
     psiThermo,
     hePsiThermo,
@@ -135,7 +135,7 @@ makeThermo
     PengRobinsonGas,
     specie
 );
-
+*/
 
 /* * * * * * * * * * * * * * Internal-energy-based * * * * * * * * * * * * * */
 
@@ -198,8 +198,8 @@ makeThermo
     perfectGas,
     specie
 );
-
-makeThermo
+/*			
+makeThermo			//removed
 (
     psiThermo,
     hePsiThermo,
@@ -209,7 +209,7 @@ makeThermo
     janafThermo,
     PengRobinsonGas,
     specie
-);
+);*/
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

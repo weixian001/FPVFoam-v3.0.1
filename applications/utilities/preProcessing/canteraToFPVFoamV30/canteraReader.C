@@ -597,6 +597,21 @@ Foam::canteraReader::canteraReader(const IOdictionary& canteraDict, const IOdict
       }
    }
    
+   newData_.resize(tableNames_.size());
+
+   // newData_ correct size of the Lists
+   for (int i=0; i<newData_.size(); i++)
+   {
+      newData_[i].resize(Zeta_param_.size());
+      for (int j=0; j<newData_[i].size();j++)
+      {
+         newData_[i][j].resize(Z_param_.size());
+         for (int k=0; k<newData_[i][j].size();k++)
+         {
+            newData_[i][j][k].resize(Pv_param_.size());
+         }
+      }
+   }
 
    // find the correct FileName to read
    for (int numPv=0; numPv<Pv_param_.size();numPv++)	//amended
@@ -660,6 +675,22 @@ Foam::canteraReader::canteraReader(const IOdictionary& canteraDict, const IOdict
          }
       }
    }
+
+        // added to look up lambda by Z, varZ and Pv
+   for (int i=0; i<sampledData_.size(); i++)
+   {
+      for (int j=0; j<sampledData_[i].size();j++)
+      {
+         for (int k=0; k<sampledData_[i][j].size();k++)
+         {
+             for (int m=0; m<sampledData_[i][j][k].size();m++)
+             {
+                newData_[i][k][m][j] = sampledData_[i][j][k][m];
+             }
+         }
+      }
+   }
+
 }
 // * * * * * * * * * * * * * * * * Destructor  * * * * * * * * * * * * * * * //
 
@@ -681,3 +712,13 @@ void	Foam::canteraReader::write(const int& i,Foam::IOdictionary& dictionary, Foa
 	dictionary.writeHeader(output);
 	output<<dictionaryName<<lists<<";";
 }
+
+void    Foam::canteraReader::writechi(Foam::IOdictionary& dictionaryChi, Foam::OFstream& output)
+{
+        word ProgressVariableName=tableNames_[tableNames_.size()-2]+"_lambda_table";  //added
+        List<List<List<scalar> > >chiArray=newData_[tableNames_.size()-2];         //added
+        dictionaryChi.set(ProgressVariableName,chiArray);
+        dictionaryChi.writeHeader(output);
+        output<<ProgressVariableName<<chiArray<<";";
+}
+

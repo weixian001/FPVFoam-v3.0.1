@@ -688,10 +688,10 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/bound.H \
 ../turbulenceModels/lnInclude/LESModel.H \
 ../turbulenceModels/lnInclude/LESdelta.H \
 ../turbulenceModels/lnInclude/LESModel.C \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/fluidThermo.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/fluidThermo.H \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+/home/users/ntu/weixian0/OpenFOAM/FPVFoamV30/src//thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
 $(WM_PROJECT_DIR)/src/transportModels/compressible/lnInclude/compressibleTransportModel.H \
 lnInclude/turbulentFluidThermoModel.C \
 $(WM_PROJECT_DIR)/src/thermophysicalModels/solidSpecie/lnInclude/solidThermoPhysicsTypes.H \

@@ -30,6 +30,8 @@ Description
 SourceFiles
     rhoThermo.C
 
+Contributors/Copyright
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
 \*---------------------------------------------------------------------------*/
 
 #ifndef rhoThermo_H
@@ -136,8 +138,12 @@ public:
             //- Compressibility [s^2/m^2]
             virtual const volScalarField& psi() const;
 
+            //- Compressibility [s^2/m^2]
+//            virtual volScalarField& psi();			//optional added
 
         // Access to transport state variables
+
+//            virtual volScalarField& mu();			//optional added
 
             //- Dynamic viscosity of mixture [kg/m/s]
             virtual tmp<volScalarField> mu() const;
