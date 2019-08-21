@@ -1,3 +1,0 @@
-FPVFoamV30Post.C
-
-EXE = $(FOAM_USER_APPBIN)/FPVFoamV30Post
