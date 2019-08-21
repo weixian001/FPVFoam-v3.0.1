@@ -1,5 +1,0 @@
-SOURCE = \
-Gamma.C \
-canteraScanner.L \
-canteraReader.C \
-canteraToFPVFoamV30.C 
