@@ -1,14 +1,14 @@
 EXE_INC = \
     -I$(LIB_SRC)/transportModels/compressible/lnInclude \
-    -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/basic/lnInclude \
-    -I$(LIB_FPVFoamV30_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/specie/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/solidSpecie/lnInclude \
     -I$(LIB_SRC)/finiteVolume/lnInclude
 
 LIB_LIBS = \
     -L$(FOAM_USER_LIBBIN) \
     -lcompressibleTransportModels \
-    -lFPVFoamV30fluidThermophysicalModels \
-    -lFPVFoamV30specie \
+    -lFPVFoamV301fluidThermophysicalModels \
+    -lFPVFoamV301specie \
     -lsolidSpecie \
     -lfiniteVolume

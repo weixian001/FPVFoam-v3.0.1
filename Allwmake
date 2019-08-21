@@ -7,8 +7,8 @@ set -x
 
 ./src/Allwmake
 
-wmake  ./applications/utilities/preProcessing/canteraToFPVFoamV30
-wmake  ./applications/utilities/postProcessing/FPVFoamV30Post
-wmake  ./applications/solver/FPVFoamV30
+wmake  ./applications/utilities/preProcessing/canteraToFPVFoamV301
+wmake  ./applications/utilities/postProcessing/FPVFoamV301Post
+wmake  ./applications/solver/FPVFoamV301
 
 # ----------------------------------------------------------------- end-of-file

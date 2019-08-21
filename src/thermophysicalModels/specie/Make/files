@@ -3,4 +3,4 @@ specie/specie.C
 reaction/reactions/makeReactions.C
 reaction/reactions/makeLangmuirHinshelwoodReactions.C
 
-LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30specie
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV301specie

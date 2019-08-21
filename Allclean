@@ -8,8 +8,8 @@ set -x
 
 ./src/Allclean
 
-wclean ./applications/utilities/preProcessing/canteraToFPVFoamV30
-wclean ./applications/utilities/postProcessing/FPVFoamV30Post
-wclean ./applications/solver/FPVFoamV30
+wclean ./applications/utilities/preProcessing/canteraToFPVFoamV301
+wclean ./applications/utilities/postProcessing/FPVFoamV301Post
+wclean ./applications/solver/FPVFoamV301
 
 # ----------------------------------------------------------------- end-of-file

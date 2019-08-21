@@ -76,4 +76,4 @@ $(RASBCs)/atmBoundaryLayerInletK/atmBoundaryLayerInletKFvPatchScalarField.C
 $(RASBCs)/atmBoundaryLayerInletEpsilon/atmBoundaryLayerInletEpsilonFvPatchScalarField.C
 
 
-LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30turbulenceModels
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV301turbulenceModels

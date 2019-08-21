@@ -19,4 +19,4 @@ derivedFvPatchFields/fixedUnburntEnthalpy/fixedUnburntEnthalpyFvPatchScalarField
 derivedFvPatchFields/gradientUnburntEnthalpy/gradientUnburntEnthalpyFvPatchScalarField.C
 derivedFvPatchFields/mixedUnburntEnthalpy/mixedUnburntEnthalpyFvPatchScalarField.C
 
-LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30reactionThermophysicalModels
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV301reactionThermophysicalModels
