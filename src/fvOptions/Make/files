@@ -62,4 +62,4 @@ $(derivedConstraints)/fixedTemperatureConstraint/fixedTemperatureConstraint.C
 
 corrections/limitTemperature/limitTemperature.C
 
-LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30fvOptions
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV301fvOptions
