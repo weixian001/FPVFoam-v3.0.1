@@ -10,7 +10,8 @@ EXE_INC = \
     -I$(LIB_SRC)/sampling/lnInclude \
     -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/chemistryModel \
     -I$(LIB_SRC)/ODE/lnInclude \
-    -I$(LIB_FPVFoamV301_SRC)/combustionModels/lnInclude
+    -I$(LIB_FPVFoamV301_SRC)/combustionModels/lnInclude \
+    -I$(LIB_FPVFoamV301_SRC)/fvOptions/lnInclude
 
 
 EXE_LIBS = \
