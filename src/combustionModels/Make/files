@@ -11,4 +11,4 @@ flameletTable/tableSolver/tableSolver.C
 
 YSLFModel/YSLFModels.C
 
-LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV30CombustionModels
+LIB = $(FOAM_USER_LIBBIN)/libFPVFoamV301CombustionModels

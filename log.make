@@ -189,33 +189,53 @@ Making dependency list for source file turbulentFluidThermoModels/derivedFvPatch
 Making dependency list for source file turbulentFluidThermoModels/derivedFvPatchFields/temperatureCoupledBase/temperatureCoupledBase.C
 Making dependency list for source file turbulentFluidThermoModels/derivedFvPatchFields/turbulentHeatFluxTemperature/turbulentHeatFluxTemperatureFvPatchScalarField.C
 Making dependency list for source file turbulentFluidThermoModels/turbulentFluidThermoModels.C
-could not open file fvOptions.H for source file turbulentFluidThermoModels/turbulentFluidThermoModels.C due to No such file or directory
 Making dependency list for source file compressibleTurbulenceModel.C
 g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c compressibleTurbulenceModel.C -o Make/linux64GccDPInt32Opt/compressibleTurbulenceModel.o
 g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/turbulentFluidThermoModels.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/turbulentFluidThermoModels.o
-In file included from ../turbulenceModels/lnInclude/kEpsilon.H:212:0,
-                 from turbulentFluidThermoModels/turbulentFluidThermoModels.C:67:
-../turbulenceModels/lnInclude/kEpsilon.C:27:23: fatal error: fvOptions.H: No such file or directory
- #include "fvOptions.H"
-                       ^
-compilation terminated.
-make: *** [Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/turbulentFluidThermoModels.o] Error 1
+In file included from turbulentFluidThermoModels/turbulentFluidThermoModels.C:37:0:
+../turbulenceModels/lnInclude/LESModel.C: In instantiation of ‘Foam::LESModel<BasicTurbulenceModel>::LESModel(const Foam::word&, const alphaField&, const rhoField&, const volVectorField&, const surfaceScalarField&, const surfaceScalarField&, const transportModel&, const Foam::word&) [with BasicTurbulenceModel = Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > >; Foam::LESModel<BasicTurbulenceModel>::alphaField = Foam::geometricOneField; Foam::LESModel<BasicTurbulenceModel>::rhoField = Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>; Foam::volVectorField = Foam::GeometricField<Foam::Vector<double>, Foam::fvPatchField, Foam::volMesh>; Foam::surfaceScalarField = Foam::GeometricField<double, Foam::fvsPatchField, Foam::surfaceMesh>; Foam::LESModel<BasicTurbulenceModel>::transportModel = Foam::fluidThermo]’:
+../turbulenceModels/lnInclude/ReynoldsStress.C:167:5:   required from ‘Foam::ReynoldsStress<BasicTurbulenceModel>::ReynoldsStress(const Foam::word&, const alphaField&, const rhoField&, const volVectorField&, const surfaceScalarField&, const surfaceScalarField&, const transportModel&, const Foam::word&) [with BasicTurbulenceModel = Foam::LESModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > >; Foam::ReynoldsStress<BasicTurbulenceModel>::alphaField = Foam::geometricOneField; Foam::ReynoldsStress<BasicTurbulenceModel>::rhoField = Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>; Foam::volVectorField = Foam::GeometricField<Foam::Vector<double>, Foam::fvPatchField, Foam::volMesh>; Foam::surfaceScalarField = Foam::GeometricField<double, Foam::fvsPatchField, Foam::surfaceMesh>; Foam::ReynoldsStress<BasicTurbulenceModel>::transportModel = Foam::fluidThermo]’
+../turbulenceModels/lnInclude/DeardorffDiffStress.C:109:5:   required from ‘Foam::LESModels::DeardorffDiffStress<BasicTurbulenceModel>::DeardorffDiffStress(const alphaField&, const rhoField&, const volVectorField&, const surfaceScalarField&, const surfaceScalarField&, const transportModel&, const Foam::word&, const Foam::word&) [with BasicTurbulenceModel = Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > >; Foam::LESModels::DeardorffDiffStress<BasicTurbulenceModel>::alphaField = Foam::geometricOneField; Foam::LESModels::DeardorffDiffStress<BasicTurbulenceModel>::rhoField = Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>; Foam::volVectorField = Foam::GeometricField<Foam::Vector<double>, Foam::fvPatchField, Foam::volMesh>; Foam::surfaceScalarField = Foam::GeometricField<double, Foam::fvsPatchField, Foam::surfaceMesh>; Foam::LESModels::DeardorffDiffStress<BasicTurbulenceModel>::transportModel = Foam::fluidThermo]’
+../turbulenceModels/lnInclude/LESModel.H:128:9:   required from ‘static Foam::autoPtr<Foam::LESModel<BasicTurbulenceModel> > Foam::LESModel<BasicTurbulenceModel>::adddictionaryConstructorToTable<LESModelType>::New(const alphaField&, const rhoField&, const volVectorField&, const surfaceScalarField&, const surfaceScalarField&, const transportModel&, const Foam::word&) [with LESModelType = Foam::LESModels::DeardorffDiffStress<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > >; BasicTurbulenceModel = Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > >; Foam::LESModel<BasicTurbulenceModel>::alphaField = Foam::geometricOneField; Foam::LESModel<BasicTurbulenceModel>::rhoField = Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>; Foam::volVectorField = Foam::GeometricField<Foam::Vector<double>, Foam::fvPatchField, Foam::volMesh>; Foam::surfaceScalarField = Foam::GeometricField<double, Foam::fvsPatchField, Foam::surfaceMesh>; Foam::LESModel<BasicTurbulenceModel>::transportModel = Foam::fluidThermo]’
+../turbulenceModels/lnInclude/LESModel.H:128:9:   required from ‘Foam::LESModel<BasicTurbulenceModel>::adddictionaryConstructorToTable<LESModelType>::adddictionaryConstructorToTable(const Foam::word&) [with LESModelType = Foam::LESModels::DeardorffDiffStress<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > >; BasicTurbulenceModel = Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > >]’
+turbulentFluidThermoModels/turbulentFluidThermoModels.C:130:1:   required from here
+../turbulenceModels/lnInclude/LESModel.H:86:27: warning: ‘Foam::LESModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > >::Sct_’ will be initialized after [-Wreorder]
+         dimensionedScalar Sct_;
+                           ^
+../turbulenceModels/lnInclude/LESModel.H:78:21: warning:   ‘const Foam::Time& Foam::LESModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > >::runTime_’ [-Wreorder]
+         const Time& runTime_; //added
+                     ^
+In file included from ../turbulenceModels/lnInclude/LESModel.H:332:0,
+                 from turbulentFluidThermoModels/turbulentFluidThermoModels.C:37:
+../turbulenceModels/lnInclude/LESModel.C:47:1: warning:   when initialized here [-Wreorder]
+ Foam::LESModel<BasicTurbulenceModel>::LESModel
+ ^
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/turbulentHeatFluxTemperature/turbulentHeatFluxTemperatureFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentHeatFluxTemperature/turbulentHeatFluxTemperatureFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/temperatureCoupledBase/temperatureCoupledBase.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/temperatureCoupledBase/temperatureCoupledBase.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/thermalBaffle1D/thermalBaffle1DFvPatchScalarFields.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/thermalBaffle1D/thermalBaffle1DFvPatchScalarFields.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/totalFlowRateAdvectiveDiffusive/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/totalFlowRateAdvectiveDiffusive/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureRadCoupledMixed/turbulentTemperatureRadCoupledMixedFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureRadCoupledMixed/turbulentTemperatureRadCoupledMixedFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/externalWallHeatFluxTemperature/externalWallHeatFluxTemperatureFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/externalWallHeatFluxTemperature/externalWallHeatFluxTemperatureFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/convectiveHeatTransfer/convectiveHeatTransferFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/convectiveHeatTransfer/convectiveHeatTransferFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatWallFunction/alphatWallFunctionFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatWallFunction/alphatWallFunctionFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatJayatillekeWallFunction/alphatJayatillekeWallFunctionFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatJayatillekeWallFunction/alphatJayatillekeWallFunctionFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatPhaseChangeWallFunction/alphatPhaseChangeWallFunctionFvPatchScalarField.C -o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatPhaseChangeWallFunction/alphatPhaseChangeWallFunctionFvPatchScalarField.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I../turbulenceModels/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/solidSpecie/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed Make/linux64GccDPInt32Opt/compressibleTurbulenceModel.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/turbulentFluidThermoModels.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentHeatFluxTemperature/turbulentHeatFluxTemperatureFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/temperatureCoupledBase/temperatureCoupledBase.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/thermalBaffle1D/thermalBaffle1DFvPatchScalarFields.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/totalFlowRateAdvectiveDiffusive/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/turbulentTemperatureRadCoupledMixed/turbulentTemperatureRadCoupledMixedFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/externalWallHeatFluxTemperature/externalWallHeatFluxTemperatureFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/convectiveHeatTransfer/convectiveHeatTransferFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatWallFunction/alphatWallFunctionFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatJayatillekeWallFunction/alphatJayatillekeWallFunctionFvPatchScalarField.o Make/linux64GccDPInt32Opt/turbulentFluidThermoModels/derivedFvPatchFields/wallFunctions/alphatWallFunctions/alphatPhaseChangeWallFunction/alphatPhaseChangeWallFunctionFvPatchScalarField.o -L/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/platforms/linux64GccDPInt32Opt/lib \
+	    -L/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib -lcompressibleTransportModels -lFPVFoamV301fluidThermophysicalModels -lsolidThermo -lsolidSpecie -lFPVFoamV301turbulenceModels -lspecie -lfiniteVolume -lmeshTools  -o /home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV301compressibleTurbulenceModels.so
+'/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV301compressibleTurbulenceModels.so' is up to date.
 + wmake libso ./fvOptions
 wmakeLnInclude: linking include files to ./lnInclude
 Making dependency list for source file corrections/limitTemperature/limitTemperature.C
-Making dependency list for source file constraints/derived/velocityDampingConstraint/velocityDampingConstraint.C
 Making dependency list for source file constraints/derived/fixedTemperatureConstraint/fixedTemperatureConstraint.C
+Making dependency list for source file constraints/general/explicitSetValue/explicitSetValue.C
 Making dependency list for source file sources/interRegion/interRegionExplicitPorositySource/interRegionExplicitPorositySource.C
 Making dependency list for source file sources/interRegion/interRegionHeatTransfer/variableHeatTransfer/variableHeatTransfer.C
-Making dependency list for source file sources/interRegion/interRegionHeatTransfer/tabulatedNTUHeatTransfer/tabulatedNTUHeatTransfer.C
 Making dependency list for source file sources/interRegion/interRegionHeatTransfer/tabulatedHeatTransfer/tabulatedHeatTransfer.C
 Making dependency list for source file sources/interRegion/interRegionHeatTransfer/constantHeatTransfer/constantHeatTransfer.C
 Making dependency list for source file sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModelIO.C
 Making dependency list for source file sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModel.C
-Making dependency list for source file sources/derived/buoyancyEnergy/buoyancyEnergyIO.C
-Making dependency list for source file sources/derived/buoyancyEnergy/buoyancyEnergy.C
-Making dependency list for source file sources/derived/buoyancyForce/buoyancyForceIO.C
-Making dependency list for source file sources/derived/buoyancyForce/buoyancyForce.C
 Making dependency list for source file sources/derived/tabulatedAccelerationSource/tabulated6DoFAcceleration/tabulated6DoFAcceleration.C
 Making dependency list for source file sources/derived/tabulatedAccelerationSource/tabulatedAccelerationSource.C
 Making dependency list for source file sources/derived/solidificationMeltingSource/solidificationMeltingSourceIO.C
@@ -238,691 +258,58 @@ Making dependency list for source file sources/derived/explicitPorositySource/ex
 Making dependency list for source file sources/derived/effectivenessHeatExchangerSource/effectivenessHeatExchangerSource.C
 Making dependency list for source file sources/derived/actuationDiskSource/actuationDiskSource.C
 Making dependency list for source file sources/general/semiImplicitSource/semiImplicitSource.C
-could not open file SemiImplicitSource.C for source file sources/general/semiImplicitSource/semiImplicitSource.C due to No such file or directory
 Making dependency list for source file sources/general/codedSource/codedSource.C
 Making dependency list for source file interRegionOption/interRegionOptionIO.C
 Making dependency list for source file interRegionOption/interRegionOption.C
 Making dependency list for source file cellSetOption/cellSetOptionIO.C
 Making dependency list for source file cellSetOption/cellSetOption.C
-g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c cellSetOption/cellSetOption.C -o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOption.o
-g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c cellSetOption/cellSetOptionIO.C -o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOptionIO.o
-g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c interRegionOption/interRegionOption.C -o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOption.o
-g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c interRegionOption/interRegionOptionIO.C -o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOptionIO.o
-g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude  -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/general/codedSource/codedSource.C -o Make/linux64GccDPInt32Opt/sources/general/codedSource/codedSource.o
-In file included from sources/general/codedSource/CodedSource.H:243:0,
-                 from sources/general/codedSource/codedSource.C:27:
-sources/general/codedSource/CodedSourceIO.C: In member function ‘virtual bool Foam::fv::CodedSource<Type>::read(const Foam::dictionary&)’:
-sources/general/codedSource/CodedSourceIO.C:50:13: error: incomplete type ‘Foam::dynamicCodeContext’ used in nested name specifier
-             dynamicCodeContext::addLineDirective
-             ^
-sources/general/codedSource/CodedSourceIO.C:67:13: error: incomplete type ‘Foam::dynamicCodeContext’ used in nested name specifier
-             dynamicCodeContext::addLineDirective
-             ^
-sources/general/codedSource/CodedSourceIO.C:84:13: error: incomplete type ‘Foam::dynamicCodeContext’ used in nested name specifier
-             dynamicCodeContext::addLineDirective
-             ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-sources/general/codedSource/codedSource.C: At global scope:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:38: error: redefinition of ‘const Foam::word Foam::fv::CodedSource<double>::typeName’
-     const ::Foam::word Type::typeName(Name)
-                                      ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:105:5: note: in expansion of macro ‘defineTypeNameWithName’
-     defineTypeNameWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘const Foam::word Foam::fv::CodedSource<double>::typeName’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:24: note: in definition of macro ‘defineTypeNameWithName’
-     const ::Foam::word Type::typeName(Name)
-                        ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:32:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:36: error: redefinition of ‘int Foam::fv::CodedSource<double>::debug’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-                                    ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:120:5: note: in expansion of macro ‘defineDebugSwitchWithName’
-     defineDebugSwitchWithName(Type, Name, DebugSwitch);                       \
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘int Foam::fv::CodedSource<double>::debug’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:9: note: in definition of macro ‘defineDebugSwitchWithName’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:61: error: redefinition of ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<double> > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<double> >::registerDebugSwitch’
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-                                                             ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:9: note: ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<double> > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<double> >::registerDebugSwitch’ previously declared here
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-In file included from sources/general/codedSource/codedSource.C:26:0:
-lnInclude/makeFvOption.H:45:9: error: redefinition of ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<double> > addCodedSourcescalardictionaryConstructorTooptionTable_’
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/codedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-lnInclude/makeFvOption.H:45:9: note: ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<double> > addCodedSourcescalardictionaryConstructorTooptionTable_’ previously declared here
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/CodedSource.C:31:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, scalar);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:38: error: redefinition of ‘const Foam::word Foam::fv::CodedSource<Foam::Vector<double> >::typeName’
-     const ::Foam::word Type::typeName(Name)
-                                      ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:105:5: note: in expansion of macro ‘defineTypeNameWithName’
-     defineTypeNameWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘const Foam::word Foam::fv::CodedSource<Foam::Vector<double> >::typeName’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:24: note: in definition of macro ‘defineTypeNameWithName’
-     const ::Foam::word Type::typeName(Name)
-                        ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:32:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:36: error: redefinition of ‘int Foam::fv::CodedSource<Foam::Vector<double> >::debug’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-                                    ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:120:5: note: in expansion of macro ‘defineDebugSwitchWithName’
-     defineDebugSwitchWithName(Type, Name, DebugSwitch);                       \
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘int Foam::fv::CodedSource<Foam::Vector<double> >::debug’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:9: note: in definition of macro ‘defineDebugSwitchWithName’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:61: error: redefinition of ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Vector<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Vector<double> > >::registerDebugSwitch’
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-                                                             ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:9: note: ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Vector<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Vector<double> > >::registerDebugSwitch’ previously declared here
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-In file included from sources/general/codedSource/codedSource.C:26:0:
-lnInclude/makeFvOption.H:45:9: error: redefinition of ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::Vector<double> > > addCodedSourcevectordictionaryConstructorTooptionTable_’
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/codedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-lnInclude/makeFvOption.H:45:9: note: ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::Vector<double> > > addCodedSourcevectordictionaryConstructorTooptionTable_’ previously declared here
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/CodedSource.C:32:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, vector);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:38: error: redefinition of ‘const Foam::word Foam::fv::CodedSource<Foam::SphericalTensor<double> >::typeName’
-     const ::Foam::word Type::typeName(Name)
-                                      ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:105:5: note: in expansion of macro ‘defineTypeNameWithName’
-     defineTypeNameWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘const Foam::word Foam::fv::CodedSource<Foam::SphericalTensor<double> >::typeName’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:24: note: in definition of macro ‘defineTypeNameWithName’
-     const ::Foam::word Type::typeName(Name)
-                        ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:32:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:36: error: redefinition of ‘int Foam::fv::CodedSource<Foam::SphericalTensor<double> >::debug’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-                                    ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:120:5: note: in expansion of macro ‘defineDebugSwitchWithName’
-     defineDebugSwitchWithName(Type, Name, DebugSwitch);                       \
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘int Foam::fv::CodedSource<Foam::SphericalTensor<double> >::debug’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:9: note: in definition of macro ‘defineDebugSwitchWithName’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:61: error: redefinition of ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SphericalTensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SphericalTensor<double> > >::registerDebugSwitch’
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-                                                             ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:9: note: ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SphericalTensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SphericalTensor<double> > >::registerDebugSwitch’ previously declared here
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-In file included from sources/general/codedSource/codedSource.C:26:0:
-lnInclude/makeFvOption.H:45:9: error: redefinition of ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::SphericalTensor<double> > > addCodedSourcesphericalTensordictionaryConstructorTooptionTable_’
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/codedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-lnInclude/makeFvOption.H:45:9: note: ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::SphericalTensor<double> > > addCodedSourcesphericalTensordictionaryConstructorTooptionTable_’ previously declared here
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/CodedSource.C:33:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, sphericalTensor);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:38: error: redefinition of ‘const Foam::word Foam::fv::CodedSource<Foam::SymmTensor<double> >::typeName’
-     const ::Foam::word Type::typeName(Name)
-                                      ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:105:5: note: in expansion of macro ‘defineTypeNameWithName’
-     defineTypeNameWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘const Foam::word Foam::fv::CodedSource<Foam::SymmTensor<double> >::typeName’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:24: note: in definition of macro ‘defineTypeNameWithName’
-     const ::Foam::word Type::typeName(Name)
-                        ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:32:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:36: error: redefinition of ‘int Foam::fv::CodedSource<Foam::SymmTensor<double> >::debug’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-                                    ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:120:5: note: in expansion of macro ‘defineDebugSwitchWithName’
-     defineDebugSwitchWithName(Type, Name, DebugSwitch);                       \
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘int Foam::fv::CodedSource<Foam::SymmTensor<double> >::debug’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:9: note: in definition of macro ‘defineDebugSwitchWithName’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:61: error: redefinition of ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SymmTensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SymmTensor<double> > >::registerDebugSwitch’
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-                                                             ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:9: note: ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SymmTensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::SymmTensor<double> > >::registerDebugSwitch’ previously declared here
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-In file included from sources/general/codedSource/codedSource.C:26:0:
-lnInclude/makeFvOption.H:45:9: error: redefinition of ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::SymmTensor<double> > > addCodedSourcesymmTensordictionaryConstructorTooptionTable_’
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/codedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-lnInclude/makeFvOption.H:45:9: note: ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::SymmTensor<double> > > addCodedSourcesymmTensordictionaryConstructorTooptionTable_’ previously declared here
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/CodedSource.C:34:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, symmTensor);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:38: error: redefinition of ‘const Foam::word Foam::fv::CodedSource<Foam::Tensor<double> >::typeName’
-     const ::Foam::word Type::typeName(Name)
-                                      ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:105:5: note: in expansion of macro ‘defineTypeNameWithName’
-     defineTypeNameWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘const Foam::word Foam::fv::CodedSource<Foam::Tensor<double> >::typeName’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:96:24: note: in definition of macro ‘defineTypeNameWithName’
-     const ::Foam::word Type::typeName(Name)
-                        ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:131:5: note: in expansion of macro ‘defineTemplateTypeNameWithName’
-     defineTemplateTypeNameWithName(Type, Name);                               \
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-In file included from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:32:0,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/typeInfo.H:57,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/token.H:46,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Istream.H:47,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/ISstream.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/IOstreams.H:38,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.C:27,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/VectorSpace.H:171,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/Vector.H:44,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/vector.H:39,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/fieldTypes.H:35,
-                 from /usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude/fvMatricesFwd.H:32,
-                 from lnInclude/fvOption.H:46,
-                 from lnInclude/makeFvOption.H:29,
-                 from sources/general/codedSource/codedSource.C:26:
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:36: error: redefinition of ‘int Foam::fv::CodedSource<Foam::Tensor<double> >::debug’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-                                    ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:120:5: note: in expansion of macro ‘defineDebugSwitchWithName’
-     defineDebugSwitchWithName(Type, Name, DebugSwitch);                       \
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-lnInclude/makeFvOption.H:38:9: note: ‘int Foam::fv::CodedSource<Foam::Tensor<double> >::debug’ previously declared here
-         Foam::fv::Option<Foam::Type>,                                         \
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:110:9: note: in definition of macro ‘defineDebugSwitchWithName’
-     int Type::debug(::Foam::debug::debugSwitch(Name, DebugSwitch))
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:61: error: redefinition of ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Tensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Tensor<double> > >::registerDebugSwitch’
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-                                                             ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/codedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:80:9: note: ‘const Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Tensor<double> > > Foam::RegisterDebugSwitch<Foam::fv::CodedSource<Foam::Tensor<double> > >::registerDebugSwitch’ previously declared here
-         Foam::RegisterDebugSwitch<Type>::registerDebugSwitch(Name)
-         ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/defineDebugSwitch.H:121:5: note: in expansion of macro ‘registerTemplateDebugSwitchWithName’
-     registerTemplateDebugSwitchWithName(Type, Name)
-     ^
-/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude/className.H:132:5: note: in expansion of macro ‘defineTemplateDebugSwitchWithName’
-     defineTemplateDebugSwitchWithName(Type, Name, DebugSwitch)
-     ^
-lnInclude/makeFvOption.H:36:5: note: in expansion of macro ‘defineTemplateTypeNameAndDebugWithName’
-     defineTemplateTypeNameAndDebugWithName                                    \
-     ^
-sources/general/codedSource/CodedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-In file included from sources/general/codedSource/codedSource.C:26:0:
-lnInclude/makeFvOption.H:45:9: error: redefinition of ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::Tensor<double> > > addCodedSourcetensordictionaryConstructorTooptionTable_’
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/codedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-lnInclude/makeFvOption.H:45:9: note: ‘Foam::fv::option::adddictionaryConstructorToTable<Foam::fv::CodedSource<Foam::Tensor<double> > > addCodedSourcetensordictionaryConstructorTooptionTable_’ previously declared here
-         add##Option##Type##dictionary##ConstructorTooptionTable_
-         ^
-sources/general/codedSource/CodedSource.C:35:1: note: in expansion of macro ‘makeFvOption’
- makeFvOption(CodedSource, tensor);
- ^
-make: *** [Make/linux64GccDPInt32Opt/sources/general/codedSource/codedSource.o] Error 1
+Making dependency list for source file fvOption/fvIOoptionList.C
+Making dependency list for source file fvOption/fvOptionList.C
+Making dependency list for source file fvOption/fvOptionIO.C
+Making dependency list for source file fvOption/fvOption.C
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c fvOption/fvOption.C -o Make/linux64GccDPInt32Opt/fvOption/fvOption.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c fvOption/fvOptionIO.C -o Make/linux64GccDPInt32Opt/fvOption/fvOptionIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c fvOption/fvOptionList.C -o Make/linux64GccDPInt32Opt/fvOption/fvOptionList.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c fvOption/fvIOoptionList.C -o Make/linux64GccDPInt32Opt/fvOption/fvIOoptionList.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c cellSetOption/cellSetOption.C -o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOption.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c cellSetOption/cellSetOptionIO.C -o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOptionIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c interRegionOption/interRegionOption.C -o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOption.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c interRegionOption/interRegionOptionIO.C -o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOptionIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/general/codedSource/codedSource.C -o Make/linux64GccDPInt32Opt/sources/general/codedSource/codedSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/general/semiImplicitSource/semiImplicitSource.C -o Make/linux64GccDPInt32Opt/sources/general/semiImplicitSource/semiImplicitSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/actuationDiskSource/actuationDiskSource.C -o Make/linux64GccDPInt32Opt/sources/derived/actuationDiskSource/actuationDiskSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/effectivenessHeatExchangerSource/effectivenessHeatExchangerSource.C -o Make/linux64GccDPInt32Opt/sources/derived/effectivenessHeatExchangerSource/effectivenessHeatExchangerSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/explicitPorositySource/explicitPorositySource.C -o Make/linux64GccDPInt32Opt/sources/derived/explicitPorositySource/explicitPorositySource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/meanVelocityForce/meanVelocityForce.C -o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/meanVelocityForce.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/meanVelocityForce/meanVelocityForceIO.C -o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/meanVelocityForceIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/meanVelocityForce/patchMeanVelocityForce/patchMeanVelocityForce.C -o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/patchMeanVelocityForce/patchMeanVelocityForce.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/radialActuationDiskSource/radialActuationDiskSource.C -o Make/linux64GccDPInt32Opt/sources/derived/radialActuationDiskSource/radialActuationDiskSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/rotorDiskSource.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/rotorDiskSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/bladeModel/bladeModel.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/bladeModel/bladeModel.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/profileModel/profileModel.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/profileModel.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/profileModel/profileModelList.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/profileModelList.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/profileModel/lookup/lookupProfile.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/lookup/lookupProfile.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/profileModel/series/seriesProfile.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/series/seriesProfile.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/trimModel/trimModel/trimModel.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/trimModel/trimModel.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/trimModel/trimModel/trimModelNew.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/trimModel/trimModelNew.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/trimModel/fixed/fixedTrim.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/fixed/fixedTrim.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/rotorDiskSource/trimModel/targetCoeff/targetCoeffTrim.C -o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/targetCoeff/targetCoeffTrim.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/solidificationMeltingSource/solidificationMeltingSource.C -o Make/linux64GccDPInt32Opt/sources/derived/solidificationMeltingSource/solidificationMeltingSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/solidificationMeltingSource/solidificationMeltingSourceIO.C -o Make/linux64GccDPInt32Opt/sources/derived/solidificationMeltingSource/solidificationMeltingSourceIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/tabulatedAccelerationSource/tabulatedAccelerationSource.C -o Make/linux64GccDPInt32Opt/sources/derived/tabulatedAccelerationSource/tabulatedAccelerationSource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/derived/tabulatedAccelerationSource/tabulated6DoFAcceleration/tabulated6DoFAcceleration.C -o Make/linux64GccDPInt32Opt/sources/derived/tabulatedAccelerationSource/tabulated6DoFAcceleration/tabulated6DoFAcceleration.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModel.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModel.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModelIO.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModelIO.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionHeatTransfer/constantHeatTransfer/constantHeatTransfer.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/constantHeatTransfer/constantHeatTransfer.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionHeatTransfer/tabulatedHeatTransfer/tabulatedHeatTransfer.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/tabulatedHeatTransfer/tabulatedHeatTransfer.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionHeatTransfer/variableHeatTransfer/variableHeatTransfer.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/variableHeatTransfer/variableHeatTransfer.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c sources/interRegion/interRegionExplicitPorositySource/interRegionExplicitPorositySource.C -o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionExplicitPorositySource/interRegionExplicitPorositySource.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c constraints/general/explicitSetValue/explicitSetValue.C -o Make/linux64GccDPInt32Opt/constraints/general/explicitSetValue/explicitSetValue.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c constraints/derived/fixedTemperatureConstraint/fixedTemperatureConstraint.C -o Make/linux64GccDPInt32Opt/constraints/derived/fixedTemperatureConstraint/fixedTemperatureConstraint.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c corrections/limitTemperature/limitTemperature.C -o Make/linux64GccDPInt32Opt/corrections/limitTemperature/limitTemperature.o
+g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed Make/linux64GccDPInt32Opt/fvOption/fvOption.o Make/linux64GccDPInt32Opt/fvOption/fvOptionIO.o Make/linux64GccDPInt32Opt/fvOption/fvOptionList.o Make/linux64GccDPInt32Opt/fvOption/fvIOoptionList.o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOption.o Make/linux64GccDPInt32Opt/cellSetOption/cellSetOptionIO.o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOption.o Make/linux64GccDPInt32Opt/interRegionOption/interRegionOptionIO.o Make/linux64GccDPInt32Opt/sources/general/codedSource/codedSource.o Make/linux64GccDPInt32Opt/sources/general/semiImplicitSource/semiImplicitSource.o Make/linux64GccDPInt32Opt/sources/derived/actuationDiskSource/actuationDiskSource.o Make/linux64GccDPInt32Opt/sources/derived/effectivenessHeatExchangerSource/effectivenessHeatExchangerSource.o Make/linux64GccDPInt32Opt/sources/derived/explicitPorositySource/explicitPorositySource.o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/meanVelocityForce.o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/meanVelocityForceIO.o Make/linux64GccDPInt32Opt/sources/derived/meanVelocityForce/patchMeanVelocityForce/patchMeanVelocityForce.o Make/linux64GccDPInt32Opt/sources/derived/radialActuationDiskSource/radialActuationDiskSource.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/rotorDiskSource.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/bladeModel/bladeModel.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/profileModel.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/profileModelList.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/lookup/lookupProfile.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/profileModel/series/seriesProfile.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/trimModel/trimModel.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/trimModel/trimModelNew.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/fixed/fixedTrim.o Make/linux64GccDPInt32Opt/sources/derived/rotorDiskSource/trimModel/targetCoeff/targetCoeffTrim.o Make/linux64GccDPInt32Opt/sources/derived/solidificationMeltingSource/solidificationMeltingSource.o Make/linux64GccDPInt32Opt/sources/derived/solidificationMeltingSource/solidificationMeltingSourceIO.o Make/linux64GccDPInt32Opt/sources/derived/tabulatedAccelerationSource/tabulatedAccelerationSource.o Make/linux64GccDPInt32Opt/sources/derived/tabulatedAccelerationSource/tabulated6DoFAcceleration/tabulated6DoFAcceleration.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModel.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/interRegionHeatTransferModel/interRegionHeatTransferModelIO.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/constantHeatTransfer/constantHeatTransfer.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/tabulatedHeatTransfer/tabulatedHeatTransfer.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionHeatTransfer/variableHeatTransfer/variableHeatTransfer.o Make/linux64GccDPInt32Opt/sources/interRegion/interRegionExplicitPorositySource/interRegionExplicitPorositySource.o Make/linux64GccDPInt32Opt/constraints/general/explicitSetValue/explicitSetValue.o Make/linux64GccDPInt32Opt/constraints/derived/fixedTemperatureConstraint/fixedTemperatureConstraint.o Make/linux64GccDPInt32Opt/corrections/limitTemperature/limitTemperature.o -L/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/platforms/linux64GccDPInt32Opt/lib \
+	    -L/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib -lfiniteVolume -lsampling -lmeshTools -lFPVFoamV301turbulenceModels -lFPVFoamV301compressibleTurbulenceModels  -o /home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV30fvOptions.so
+'/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV30fvOptions.so' is up to date.
 + wmake libso ./combustionModels
 wmakeLnInclude: linking include files to ./lnInclude
 Making dependency list for source file YSLFModel/YSLFModels.C
@@ -945,9 +332,7 @@ g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra 
 g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/reactionThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/chemistryModel/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c YSLFModel/YSLFModels.C -o Make/linux64GccDPInt32Opt/YSLFModel/YSLFModels.o
 g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/reactionThermo/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/thermophysicalModels/chemistryModel/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed Make/linux64GccDPInt32Opt/combustionModel/combustionModel.o Make/linux64GccDPInt32Opt/rhoCombustionModel/rhoCombustionModel/rhoCombustionModel.o Make/linux64GccDPInt32Opt/rhoCombustionModel/rhoCombustionModel/rhoCombustionModelNew.o Make/linux64GccDPInt32Opt/rhoCombustionModel/rhoThermoCombustion/rhoThermoCombustion.o Make/linux64GccDPInt32Opt/rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.o Make/linux64GccDPInt32Opt/flameletTable/linearInterpolation/linearInterpolation.o Make/linux64GccDPInt32Opt/flameletTable/flameletTable/flameletTable.o Make/linux64GccDPInt32Opt/flameletTable/tableSolver/tableSolver.o Make/linux64GccDPInt32Opt/YSLFModel/YSLFModels.o -L/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/platforms/linux64GccDPInt32Opt/lib \
 	    -L/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib -lcompressibleTransportModels -lFPVFoamV301turbulenceModels -lFPVFoamV301compressibleTurbulenceModels -lchemistryModel -lfiniteVolume -lmeshTools  -o /home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV30CombustionModels.so
-/usr/bin/ld: cannot find -lFPVFoamV301compressibleTurbulenceModels
-collect2: error: ld returned 1 exit status
-make: *** [/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV30CombustionModels.so] Error 1
+'/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/lib/libFPVFoamV30CombustionModels.so' is up to date.
 + wmake ./applications/utilities/preProcessing/canteraToFPVFoamV301
 Making dependency list for source file canteraToFPVFoamV301.C
 Making dependency list for source file canteraReader.C
@@ -974,11 +359,11 @@ collect2: error: ld returned 1 exit status
 make: *** [/home/weixian001/OpenFOAM/weixian001-3.0.1/platforms/linux64GccDPInt32Opt/bin/FPVFoamV301Post] Error 1
 + wmake ./applications/solver/FPVFoamV301
 Making dependency list for source file FPVFoamV301.C
-could not open file fvOptions.H for source file FPVFoamV301.C due to No such file or directory
+could not open file fvIOoptionList.H for source file FPVFoamV301.C due to No such file or directory
 could not open file createFvOptions.H for source file FPVFoamV301.C due to No such file or directory
 g++ -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/transportModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/turbulenceModels/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/TurbulenceModels/compressible/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/specie/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/reactionThermo/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/basic/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/finiteVolume/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/meshTools/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/sampling/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/thermophysicalModels/chemistryModel -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/ODE/lnInclude -I/home/weixian001/OpenFOAM/FPVFoam-v3.0.1/src/combustionModels/lnInclude -IlnInclude -I. -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OpenFOAM/lnInclude -I/usr/local/RH6_apps/OpenFOAM/OpenFOAM-3.0.1/src/OSspecific/POSIX/lnInclude   -fPIC -c FPVFoamV301.C -o Make/linux64GccDPInt32Opt/FPVFoamV301.o
-FPVFoamV301.C:42:23: fatal error: fvOptions.H: No such file or directory
- #include "fvOptions.H"
-                       ^
+FPVFoamV301.C:42:28: fatal error: fvIOoptionList.H: No such file or directory
+ #include "fvIOoptionList.H"
+                            ^
 compilation terminated.
 make: *** [Make/linux64GccDPInt32Opt/FPVFoamV301.o] Error 1
