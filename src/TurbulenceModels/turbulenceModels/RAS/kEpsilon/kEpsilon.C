@@ -24,7 +24,6 @@ License
 \*---------------------------------------------------------------------------*/
 
 #include "kEpsilon.H"
-#include "fvOptions.H"
 #include "bound.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -41,10 +40,6 @@ void kEpsilon<BasicTurbulenceModel>::correctNut()
 {
     this->nut_ = Cmu_*sqr(k_)/epsilon_;
     this->nut_.correctBoundaryConditions();
-
-    fv::options& fvOptions(fv::options::New(this->mesh_));
-    fvOptions.correct(this->nut_);
-
     BasicTurbulenceModel::correctNut();
 }
 
@@ -192,6 +187,7 @@ kEpsilon<BasicTurbulenceModel>::kEpsilon
     if (type == typeName)
     {
         this->printCoeffs(type);
+        correctNut();		//added due to version 3.0.1
     }
 }
 
@@ -233,7 +229,6 @@ void kEpsilon<BasicTurbulenceModel>::correct()
     const surfaceScalarField& alphaRhoPhi = this->alphaRhoPhi_;
     const volVectorField& U = this->U_;
     volScalarField& nut = this->nut_;
-    fv::options& fvOptions(fv::options::New(this->mesh_));
 
     eddyViscosity<RASModel<BasicTurbulenceModel> >::correct();
 
@@ -257,14 +252,11 @@ void kEpsilon<BasicTurbulenceModel>::correct()
       - fvm::SuSp(((2.0/3.0)*C1_ + C3_)*alpha*rho*divU, epsilon_)
       - fvm::Sp(C2_*alpha*rho*epsilon_/k_, epsilon_)
       + epsilonSource()
-      + fvOptions(alpha, rho, epsilon_)
     );
 
     epsEqn().relax();
-    fvOptions.constrain(epsEqn());
     epsEqn().boundaryManipulate(epsilon_.boundaryField());
     solve(epsEqn);
-    fvOptions.correct(epsilon_);
     bound(epsilon_, this->epsilonMin_);
 
     // Turbulent kinetic energy equation
@@ -278,13 +270,10 @@ void kEpsilon<BasicTurbulenceModel>::correct()
       - fvm::SuSp((2.0/3.0)*alpha*rho*divU, k_)
       - fvm::Sp(alpha*rho*epsilon_/k_, k_)
       + kSource()
-      + fvOptions(alpha, rho, k_)
     );
 
     kEqn().relax();
-    fvOptions.constrain(kEqn());
     solve(kEqn);
-    fvOptions.correct(k_);
     bound(k_, this->kMin_);
 
     correctNut();

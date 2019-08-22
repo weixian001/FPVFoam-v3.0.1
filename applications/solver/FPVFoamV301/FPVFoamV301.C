@@ -39,7 +39,7 @@ Contributors/Copyright
 #include "turbulentFluidThermoModel.H"  // added for v3.0
 #include "multivariateScheme.H"
 #include "pimpleControl.H"
-#include "fvOptions.H"
+#include "fvIOoptionList.H"
 #include "localEulerDdtScheme.H"	// added for v3.0
 #include "fvcSmooth.H"			// added for v3.0
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

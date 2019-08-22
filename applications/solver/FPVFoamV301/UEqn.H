@@ -2,7 +2,7 @@
 
 MRF.correctBoundaryVelocity(U);
 
-tmp<fvVectorMatrix> UEqn
+fvVectorMatrix UEqn
 (
     fvm::ddt(rho, U) + fvm::div(phi, U)
   + MRF.DDt(rho, U)
