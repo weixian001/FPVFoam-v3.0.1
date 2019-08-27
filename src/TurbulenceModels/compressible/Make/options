@@ -2,7 +2,7 @@ EXE_INC = \
     -I../turbulenceModels/lnInclude \
     -I$(LIB_SRC)/transportModels/compressible/lnInclude \
     -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/basic/lnInclude \
-    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/specie/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/solidThermo/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/solidSpecie/lnInclude \
     -I$(LIB_SRC)/finiteVolume/lnInclude \
@@ -15,6 +15,6 @@ LIB_LIBS = \
     -lsolidThermo \
     -lsolidSpecie \
     -lFPVFoamV301turbulenceModels \
-    -lspecie \
+    -lFPVFoamV301specie \
     -lfiniteVolume \
     -lmeshTools

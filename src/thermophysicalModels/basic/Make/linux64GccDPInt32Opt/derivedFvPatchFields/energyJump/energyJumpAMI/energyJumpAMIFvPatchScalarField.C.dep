@@ -468,7 +468,7 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/cyclicAMIFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/jumpCyclicAMIFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedJumpAMIFvPatchField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fixedJumpAMIFvPatchFields.H \
-/home/weixian001/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermo.H \
+lnInclude/basicThermo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H \
@@ -546,6 +546,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/sphericalTensorFieldField.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tensorFieldField.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H \
-/home/weixian001/OpenFOAM/FPVFoamV30/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C \
+lnInclude/basicThermoTemplates.C \
 
 

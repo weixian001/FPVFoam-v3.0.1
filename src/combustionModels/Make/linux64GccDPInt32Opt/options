@@ -1,0 +1,8 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "Make/options"
+EXE_INC = -I$(LIB_SRC)/transportModels/compressible/lnInclude -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/basic/lnInclude -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude -I$(LIB_FPVFoamV301_SRC)/thermophysicalModels/reactionThermo/lnInclude -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude -I$(LIB_FPVFoamV301_SRC)/TurbulenceModels/turbulenceModels/lnInclude -I$(LIB_FPVFoamV301_SRC)/TurbulenceModels/compressible/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude -I$(LIB_SRC)/meshTools/lnInclude
+# 11 "Make/options"
+
+LIB_LIBS = -L$(FOAM_USER_LIBBIN) -lcompressibleTransportModels -lFPVFoamV301turbulenceModels -lFPVFoamV301compressibleTurbulenceModels -lchemistryModel -lfiniteVolume -lmeshTools
