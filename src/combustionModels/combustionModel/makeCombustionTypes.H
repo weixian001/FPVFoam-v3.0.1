@@ -82,10 +82,38 @@ License
                 Table,                                                         \
                 CombModel##CombType,                                           \
                 dictionary                                                     \
-            );                                                                 \
+            );								       \
         }                                                                      \
     }
 
+/*
+#define makePSICombustionTypes(CombModel, CombType, Table)                     \
+                                                                               \
+    typedef Foam::combustionModels::CombModel                                  \
+        <Foam::combustionModels::CombType>                                     \
+        CombModel##CombType;                                                   \
+                                                                               \
+    defineTemplateTypeNameAndDebugWithName                                     \
+    (                                                                          \
+        CombModel##CombType,                                                   \
+        #CombModel"<"#CombType">",                                             \
+        0                                                                      \
+    );                                                                         \
+                                                                               \
+    namespace Foam                                                             \
+    {                                                                          \
+        namespace combustionModels                                             \
+        {                                                                      \
+            typedef CombModel<CombType> CombModel##CombType;                   \
+                                                                               \
+            addToRunTimeSelectionTable                                         \
+            (                                                                  \
+                Table,                                                         \
+                CombModel##CombType,                                           \
+                dictionary                                                     \
+            );								       \
+        }                                                                      \
+    }*/
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 #endif

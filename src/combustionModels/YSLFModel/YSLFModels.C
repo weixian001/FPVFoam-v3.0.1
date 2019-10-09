@@ -24,20 +24,21 @@ License
 Contributors/Copyright
     2014 Hagen Müller <hagen.mueller@unibw.de> Universität der Bundeswehr München
     2014 Likun Ma <L.Ma@tudelft.nl> TU Delft
+    2019 Lim Wei Xian <weixian001@e.ntu.edu.sg> NTUsg
 
 \*---------------------------------------------------------------------------*/
 
 #include "makeCombustionTypes.H"
-
+#include "psiThermoCombustion.H"
 #include "rhoThermoCombustion.H"         
 #include "thermoPhysicsTypes.H"
 #include "YSLFModel.H"
 
-namespace Foam
+/*namespace Foam
 {
 namespace combustionModels
 {
-
+*/
 makeCombustionTypes
 (
     YSLFModel,
@@ -45,5 +46,13 @@ makeCombustionTypes
     rhoCombustionModel  
 );
 
-} // End namespace combustionModels
-} // End namespace Foam
+makeCombustionTypes
+(
+    YSLFModel,
+    psiThermoCombustion,
+    psiCombustionModel
+);
+
+//} // End namespace combustionModels
+//} // End namespace Foam
+
