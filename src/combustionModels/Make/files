@@ -1,5 +1,10 @@
 combustionModel/combustionModel.C
 
+psiCombustionModel/psiCombustionModel/psiCombustionModel.C
+psiCombustionModel/psiCombustionModel/psiCombustionModelNew.C
+psiCombustionModel/psiThermoCombustion/psiThermoCombustion.C
+psiCombustionModel/psiChemistryCombustion/psiChemistryCombustion.C
+
 rhoCombustionModel/rhoCombustionModel/rhoCombustionModel.C
 rhoCombustionModel/rhoCombustionModel/rhoCombustionModelNew.C
 rhoCombustionModel/rhoThermoCombustion/rhoThermoCombustion.C
