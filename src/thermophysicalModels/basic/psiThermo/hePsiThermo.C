@@ -99,6 +99,12 @@ void Foam::hePsiThermo<BasicPsiThermo, MixtureType>::calculate()
             }
 //        }
     }
+    Info << "----------> T min/max =" << min(this->T_).value() << ", "
+        << max(this->T_).value() << endl;
+    Info << "----------> psi min/max =" << min(this->psi_).value() << ", "
+        << max(this->psi_).value() << endl;
+    Info << "----------> mu min/max =" << min(this->mu_).value() << ", "
+        << max(this->mu_).value() << endl;
 }
 
 

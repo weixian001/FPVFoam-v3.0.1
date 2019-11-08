@@ -75,8 +75,6 @@ protected:
         //- Model coefficients dictionary
         dictionary coeffDict_;
 
-        const Time& runTime_;	//added
-
         dimensionedScalar CvarZ_;
 
         dimensionedScalar Cchi_;
@@ -84,6 +82,8 @@ protected:
         dimensionedScalar Sc_;
 
         dimensionedScalar Sct_;
+
+        const Time& runTime_;	//added
 
         //- Lower limit of k
         dimensionedScalar kMin_;
@@ -230,7 +230,23 @@ public:
         {
             return this->nut(patchi) + this->nu(patchi);
         }
-
+/*
+        virtual tmp<volScalarField> muEff() const
+        {
+            return tmp<volScalarField>
+            (
+                new volScalarField
+                (
+                    IOobject::groupName("muEff", this->U_.group()),
+                    this->rho_*this->nut() + this->rho_*this->nu()
+                )
+            );
+        }
+        virtual tmp<scalarField> muEff(const label patchi) const
+        {
+            return this->rho_*this->nut(patchi) + this->rho_*this->nu(patchi);
+        }
+*/
 //%%%%%%%%%%%%%%%%%%%%%% Dynamics viscosity Modelling %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	//- Return Coeff of Production term of varZ (dynamics viscosity)		//added

@@ -93,7 +93,6 @@ Foam::fluidThermo::fluidThermo(const fvMesh& mesh, const word& phaseName)
         mesh,
         dimensionSet(1, -3, -1, 0, 0)
     )
-
 {}
 
 

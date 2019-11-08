@@ -96,5 +96,4 @@ void Foam::turbulenceModel::correct()
     }
 }
 
-//Foam::tmp<Foam::volScalarField> correctVarZ(volScalarField& varZ) const
 // ************************************************************************* //
