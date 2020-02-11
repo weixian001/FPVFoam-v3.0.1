@@ -124,6 +124,8 @@ public:
 
         // Access to transport state variables
 
+            virtual volScalarField& mu();
+
             //- Dynamic viscosity of mixture [kg/m/s]
             virtual tmp<volScalarField> mu() const;
 

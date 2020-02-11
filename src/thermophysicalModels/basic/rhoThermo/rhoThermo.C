@@ -197,10 +197,10 @@ Foam::volScalarField& Foam::rhoThermo::psi()			//optional added
 {
     return psi_;
 }
-
+*/
 Foam::volScalarField& Foam::rhoThermo::mu()
 {
         return mu_;
 }
-*/
+
 // ************************************************************************* //

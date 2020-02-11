@@ -191,6 +191,10 @@ Foam::tmp<Foam::scalarField> Foam::fluidThermo::nu(const label patchi) const
 
 //added this section
 
+/*Foam::tmp<Foam::volScalarField> Foam::fluidThermo::mu_table()
+{
+    return mu();
+}*/
 Foam::volScalarField& Foam::fluidThermo::Z()
 {
     return Z_;

@@ -82,6 +82,9 @@ protected:
         //- Enthalpy
         volScalarField& he_;    
         
+        //- Dynamics Viscosity
+        volScalarField& mu_;
+
         //- Source - Reaction Rate
         volScalarField& Srr_;				//added
 
@@ -150,6 +153,8 @@ public:
 
         //- Correct combustion rate
         virtual void correct();
+	
+	//virtual tmp<volScalarField> mu() const = 0;
 
         //- Correct density during PISO
         Switch correctDensity();

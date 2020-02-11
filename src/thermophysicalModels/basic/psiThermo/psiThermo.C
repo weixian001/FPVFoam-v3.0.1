@@ -107,6 +107,10 @@ const Foam::volScalarField& Foam::psiThermo::psi() const
     return psi_;
 }
 
+Foam::volScalarField& Foam::psiThermo::mu()
+{
+    return mu_;
+}
 
 Foam::tmp<Foam::volScalarField> Foam::psiThermo::mu() const
 {

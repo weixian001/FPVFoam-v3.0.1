@@ -123,12 +123,14 @@ int main(int argc, char *argv[])
     List<scalarList> posP(mesh.faces().size());
 
     wordList tableNames(thermo.composition().species());
+    tableNames.append("mu");
     tableNames.append("he");
     tableNames.append("Srr");
     word LambdaNames = "chi_lambda_table";
     Foam::combustionModels::tableSolver solver(Foam::combustionModels::tableSolver(mesh, tableNames, LambdaNames));
 
     PtrList<volScalarField>& Y(thermo.composition().Y());
+    volScalarField& mu(thermo.mu());
     volScalarField& he(thermo.he());
     volScalarField& Srr(thermo.Srr());
 
@@ -201,6 +203,19 @@ int main(int argc, char *argv[])
             sqrt(varZ/max(Z*(1-Z), SMALL))
         );
 
+        volScalarField HRR
+        (
+            IOobject
+            (
+                "HRR",
+                runTime.timeName(),
+                mesh,
+                IOobject::NO_READ,
+                IOobject::NO_WRITE
+            ),
+	    mesh
+        );
+
         // Interpolate for internal Field
         //scalar chiMax = solver.maxChi();
         //scalar chiMin = solver.minChi();
@@ -233,6 +248,7 @@ int main(int argc, char *argv[])
                   ubIF[cellI] = solver.upperBounds(x);
                   posIF[cellI] = solver.position(ubIF[cellI], x);
 
+             	 mu[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 3));
              	 he[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 2));
              	 Srr[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 1));
          	 }
@@ -249,6 +265,7 @@ int main(int argc, char *argv[])
            const fvPatchScalarField& pZeta = Zeta.boundaryField()[patchi];
            const fvPatchScalarField& pZ = Z.boundaryField()[patchi];
 
+           fvPatchScalarField& pmu = mu.boundaryField()[patchi];
            fvPatchScalarField& pHe = he.boundaryField()[patchi];
            fvPatchScalarField& pSrr = Srr.boundaryField()[patchi];		//added
 
@@ -278,6 +295,7 @@ int main(int argc, char *argv[])
                       ubP[facei] = solver.upperBounds(x);
                       posP[facei] = solver.position(ubP[facei], x);
 
+                      pmu[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 3));
                       pHe[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 2));
                       pSrr[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 1));
               	 }
@@ -290,7 +308,10 @@ int main(int argc, char *argv[])
         // Calculate thermodynamic Properties
         thermo.correct();
 
-        if (selectedFields.empty())
+	HRR = thermo.rho()*thermo.he();
+	HRR.write();
+
+/*        if (selectedFields.empty())
         {
         	forAll(Y, i)
             {
@@ -313,7 +334,7 @@ int main(int argc, char *argv[])
             Info << "Writing field Zeta" << endl;
         	Zeta.write();
         }
-
+*/
     }
 
 	// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

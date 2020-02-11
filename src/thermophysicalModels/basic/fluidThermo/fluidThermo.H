@@ -134,6 +134,8 @@ public:
             virtual tmp<scalarField> nu(const label patchi) const;
 
 		// Added this section						//added 
+//                virtual tmp<volScalarField> mu_table() const;
+
                 virtual volScalarField& Z();
 
                 virtual const volScalarField& Z() const;
