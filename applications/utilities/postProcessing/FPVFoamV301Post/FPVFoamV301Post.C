@@ -252,10 +252,10 @@ int main(int argc, char *argv[])
              	 mu[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 3));
              	 he[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 2));
              	 Srr[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 1));
+		 HRR[cellI] = he[cellI]*Srr[cellI]*1e-6; //in MW/m^3
          	 }
 
          	 YCells[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], i);
-		 HRR[cellI] = he[cellI]*Srr[cellI]*1e-6; //in MW/m^3
            }
         }
 
@@ -301,9 +301,9 @@ int main(int argc, char *argv[])
                       pmu[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 3));
                       pHe[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 2));
                       pSrr[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 1));
+		      pHRR[facei] = pHe[facei]*pSrr[facei]*1e-6; // in MW/m^3
               	 }
              	 pY[facei] = solver.interpolate(ubP[facei], posP[facei], i);
-		 pHRR[facei] = pHe[facei]*pSrr[facei]*1e-6; // in MW/m^3
               }
            }
         }
