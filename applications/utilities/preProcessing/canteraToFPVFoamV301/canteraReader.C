@@ -572,7 +572,7 @@ Foam::canteraReader::canteraReader(const IOdictionary& canteraDict, const IOdict
    
    tableNames_.append("T");
    tableNames_.append("Z");
-   tablesToBeRead_.append("HeatRR");
+   tableNames_.append("HeatRR");
    //tableNames_.append("Cp");
    //tableNames_.append("psi");
    //tableNames_.append("rho");
