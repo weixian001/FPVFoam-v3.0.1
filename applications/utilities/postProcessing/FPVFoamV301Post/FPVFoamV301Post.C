@@ -123,6 +123,7 @@ int main(int argc, char *argv[])
     List<scalarList> posP(mesh.faces().size());
 
     wordList tableNames(thermo.composition().species());
+    tableNames.append("HeatRR");
     tableNames.append("mu");
     tableNames.append("he");
     tableNames.append("Srr");
@@ -203,11 +204,11 @@ int main(int argc, char *argv[])
             sqrt(varZ/max(Z*(1-Z), SMALL))
         );
 
-        volScalarField HRR
+        volScalarField Qdt
         (
             IOobject
             (
-                "HRR",
+                "Qdt",
                 runTime.timeName(),
                 mesh,
                 IOobject::NO_READ,
@@ -249,10 +250,11 @@ int main(int argc, char *argv[])
                   ubIF[cellI] = solver.upperBounds(x);
                   posIF[cellI] = solver.position(ubIF[cellI], x);
 
+                 Qdt[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 4));
              	 mu[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 3));
              	 he[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 2));
              	 Srr[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], (solver.sizeTableNames() - 1));
-		 HRR[cellI] = he[cellI]*Srr[cellI]*1e-6; //in MW/m^3
+		 //HRR[cellI] = he[cellI]*Srr[cellI]*1e-6; //in MW/m^3
          	 }
 
          	 YCells[cellI] = solver.interpolate(ubIF[cellI], posIF[cellI], i);
@@ -270,7 +272,7 @@ int main(int argc, char *argv[])
            fvPatchScalarField& pmu = mu.boundaryField()[patchi];
            fvPatchScalarField& pHe = he.boundaryField()[patchi];
            fvPatchScalarField& pSrr = Srr.boundaryField()[patchi];		//added
-	   fvPatchScalarField& pHRR = HRR.boundaryField()[patchi];              //added
+	   fvPatchScalarField& pQdt = Qdt.boundaryField()[patchi];              //added
 
            forAll(Y, i)
            {
@@ -298,10 +300,11 @@ int main(int argc, char *argv[])
                       ubP[facei] = solver.upperBounds(x);
                       posP[facei] = solver.position(ubP[facei], x);
 
+                      pQdt[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 4));
                       pmu[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 3));
                       pHe[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 2));
                       pSrr[facei] = solver.interpolate(ubP[facei], posP[facei], (solver.sizeTableNames() - 1));
-		      pHRR[facei] = pHe[facei]*pSrr[facei]*1e-6; // in MW/m^3
+		      //pHRR[facei] = pHe[facei]*pSrr[facei]*1e-6; // in MW/m^3
               	 }
              	 pY[facei] = solver.interpolate(ubP[facei], posP[facei], i);
               }
@@ -311,7 +314,7 @@ int main(int argc, char *argv[])
         // Calculate thermodynamic Properties
         thermo.correct();
 
-	HRR.write();
+	Qdt.write();
 
 /*        if (selectedFields.empty())
         {

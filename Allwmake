@@ -9,5 +9,6 @@ set -x
 wmake  ./applications/utilities/preProcessing/canteraToFPVFoamV301
 wmake  ./applications/utilities/postProcessing/FPVFoamV301Post
 wmake  ./applications/solver/FPVFoamV301
+wmake  ./../FPVBuoyantFoam-v3.0.1/
 
 # ----------------------------------------------------------------- end-of-file

@@ -88,6 +88,9 @@ protected:
         //- Source - Reaction Rate
         volScalarField& Srr_;				//added
 
+        //- Heat Reaction Rate
+        volScalarField& Qdt_;                           //added
+
         //- Mixture fraction
         const volScalarField& Z_;
         
